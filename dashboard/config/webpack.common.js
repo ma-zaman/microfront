@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: 'cue-loader'
+        use: 'vue-loader'
       },
       {
         test: /\.scss|\.css$/,

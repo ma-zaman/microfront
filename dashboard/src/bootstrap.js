@@ -1,18 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import { createApp } from 'vue'
+import Dashboard from './components/Dashboard.vue'
 
-console.log('Marketing !')
+console.log('Dashboard !')
 
 const mount = (el) => {
-  ReactDOM.render(
-    <App />,
-    el
-  )
+  const app = createApp(Dashboard)
+  app.mount(el)
 }
 
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root')
+  const devRoot = document.querySelector('#_dashboard-dev-root')
 
   if (devRoot) {
     mount(devRoot)

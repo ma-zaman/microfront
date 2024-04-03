@@ -5,7 +5,7 @@ import App from './App'
 
 console.log('Auth !')
 
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onNavigate, onSignIn, defaultHistory, initialPath }) => {
   const history = defaultHistory || createMemoryHistory({
     initialEntries: [initialPath]
   })
@@ -13,7 +13,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   if (onNavigate) history.listen(onNavigate)
 
   ReactDOM.render(
-    <App history={history} />,
+    <App onSignIn={onSignIn} history={history} />,
     el
   )
 

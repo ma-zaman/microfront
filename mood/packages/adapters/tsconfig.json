@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@mood/domain": ["../domain/src"],
+      "@mood/web-adapters": ["src"]
+    }
+  },
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts", "__tests__/**/*.ts", "src"]
+}

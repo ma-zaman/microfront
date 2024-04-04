@@ -72,7 +72,7 @@ export default function Header({ isSignedIn, onSignOut }) {
         className={classes.appBar}
       >
         <Toolbar className={classes.toolbar}>
-          <Typography
+        <Typography
             variant="h6"
             color="inherit"
             noWrap
@@ -80,6 +80,15 @@ export default function Header({ isSignedIn, onSignOut }) {
             to="/"
           >
             App
+          </Typography>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            component={RouterLink}
+            to="/mood"
+          >
+            Mood
           </Typography>
           <Button
             color="primary"
